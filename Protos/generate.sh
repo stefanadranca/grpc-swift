@@ -96,6 +96,14 @@ function generate_helloworld_example {
   generate_grpc "$proto" "$(dirname "$proto")" "$output" "Visibility=Public"
 }
 
+function generate_helloworld_codegen_example {
+  local proto="$here/upstream/grpc/examples/helloworld.proto"
+  local output="$root/Sources/Examples/ProtobufCodeGen"
+
+  generate_message "$proto" "$(dirname "$proto")" "$output" "Visibility=Public"
+  generate_grpc "$proto" "$(dirname "$proto")" "$output" "Visibility=Public" "Client=true" "Server=true" "_V2=true"
+}
+
 function generate_reflection_service {
   local proto_v1="$here/upstream/grpc/reflection/v1/reflection.proto"
   local output_v1="$root/Sources/GRPCReflectionService/v1"
