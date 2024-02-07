@@ -545,11 +545,7 @@ final class TypealiasTranslatorSnippetBasedTests: XCTestCase {
           public enum Method {
               public static let descriptors: [MethodDescriptor] = []
           }
-<<<<<<< HEAD
-          public typealias StreamingServiceProtocol = BServiceServiceStreamingProtocol
-=======
           public typealias StreamingServiceProtocol = BServiceStreamingServiceProtocol
->>>>>>> daa008e437c88001b5df77424559dd70dd1e6aef
           public typealias ServiceProtocol = BServiceServiceProtocol
           public typealias ClientProtocol = BServiceClientProtocol
           public typealias Client = BServiceClient
@@ -559,11 +555,7 @@ final class TypealiasTranslatorSnippetBasedTests: XCTestCase {
               public enum Method {
                   public static let descriptors: [MethodDescriptor] = []
               }
-<<<<<<< HEAD
-              public typealias StreamingServiceProtocol = Anamespace_AServiceServiceStreamingProtocol
-=======
               public typealias StreamingServiceProtocol = Anamespace_AServiceStreamingServiceProtocol
->>>>>>> daa008e437c88001b5df77424559dd70dd1e6aef
               public typealias ServiceProtocol = Anamespace_AServiceServiceProtocol
               public typealias ClientProtocol = Anamespace_AServiceClientProtocol
               public typealias Client = Anamespace_AServiceClient

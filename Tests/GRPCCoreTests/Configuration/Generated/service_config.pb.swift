@@ -919,7 +919,7 @@ struct Grpc_ServiceConfig_XdsClusterResolverLoadBalancingPolicyConfig {
   /// successive priorities.
   var discoveryMechanisms: [Grpc_ServiceConfig_XdsClusterResolverLoadBalancingPolicyConfig.DiscoveryMechanism] = []
 
-  /// xDS LB policy. Will be used as the child config of the xds_cluster_impl LB policy.
+  /// xDS LB policy. Will be used as the child config of the xds_cluster_impl LB policy. 
   var xdsLbPolicy: [Grpc_ServiceConfig_LoadBalancingConfig] = []
 
   var unknownFields = SwiftProtobuf.UnknownStorage()

@@ -80,6 +80,14 @@ function generate_echo_example {
   generate_grpc "$proto" "$(dirname "$proto")" "$output" "Visibility=Public" "TestClient=true"
 }
 
+function generate_echo_codegen_example {
+  local proto="$here/examples/echo/echo.proto"
+  local output="$root/Sources/Examples/ProtobufCodeGen/Echo"
+
+  generate_message "$proto" "$(dirname "$proto")" "$output" "Visibility=Public"
+  generate_grpc "$proto" "$(dirname "$proto")" "$output" "Visibility=Public" "Client=true" "Server=true" "_V2=true"
+}
+
 function generate_routeguide_example {
   local proto="$here/examples/route_guide/route_guide.proto"
   local output="$root/Sources/Examples/RouteGuide/Model"
@@ -193,6 +201,7 @@ generate_echo_example
 generate_routeguide_example
 generate_helloworld_example
 generate_reflection_data_example
+generate_echo_codegen_example
 
 # Reflection service and tests
 generate_reflection_service
