@@ -592,6 +592,17 @@ extension Target {
     ]
   )
 
+  static let protobufCodeGenServer: Target = .executableTarget(
+    name: "MomentOfTruth",
+    dependencies: [
+      .grpcCore,
+      .argumentParser,
+      .grpcInProcessTransport,
+      .grpcProtobuf
+    ],
+    path: "Sources/Examples/ProtobufCodeGen"
+  )
+  
   static let grpcCodeGen: Target = .target(
     name: "GRPCCodeGen",
     path: "Sources/GRPCCodeGen"
@@ -692,6 +703,7 @@ let package = Package(
     .routeGuideServer,
     .packetCapture,
     .reflectionServer,
+    .protobufCodeGenServer,
 
     // v2
     .grpcCore,
